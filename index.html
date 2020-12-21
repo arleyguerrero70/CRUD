@@ -4,10 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/darkly/bootstrap.min.css">
 </head>
 <body>
-    <h1>Holi</h1>
+    <h1>Area de tareas</h1>
     
+    
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-6 ">
+                <div class="card border-light">
+                    <div class="card-body bg-primary ">
+                        <form id="task-form">
+                            <div class="form-group">
+                                <input type="text" id="text-tittle" class="form-control" placeholder="Título de tarea" autofocus>
+                            </div>  
+                            <div class="form-group">
+                                <textarea  id="text-description" rows="3" class="form-control" placeholder="Descripción de la tarea"></textarea>
+                            </div> 
+                            <button class="btn btn-success" id="btn-task-form">Crear tarea</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" id="task-container">
+            </div>
+        </div>
+    </div>
+
+
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyC_UX_h112VCk4igjbIQUn3l1NGVqxz9gU",
+            authDomain: "crud-e5e1a.firebaseapp.com",
+            projectId: "crud-e5e1a",
+            storageBucket: "crud-e5e1a.appspot.com",
+            messagingSenderId: "590171001795",
+            appId: "1:590171001795:web:9496fbbec83665f48be376"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
     <script src="index.js"></script>
 </body>
 </html>
